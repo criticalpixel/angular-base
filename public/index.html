@@ -4,63 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Angular Skeleton Project</title>
 	<!-- SCROLLS -->
-	<link rel="stylesheet" href="res/css/main.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-	<style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #todo-list              { margin-bottom:30px; }
-    </style>
-	<!-- SPELLS -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
-	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
-	<!-- MODULES -->
-	<script type="text/javascript" src="lib/modules/app.js"></script>
-	<script type="text/javascript" src="lib/modules/core.js"></script>
-	<!-- CONTROLLERS -->
-	<script type="text/javascript" src="lib/controllers/appController.js"></script>
-	<!-- DIRECTIVES -->
+	<link rel="stylesheet" href="lib/css/main.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <!-- SPELLS -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <!-- MODULES -->
+    <script type="text/javascript" src="app/modules/app.js"></script>   
+    <script type="text/javascript" src="app/modules/core.js"></script>
+    <!-- CONTROLLERS -->
+    <script type="text/javascript" src="app/controllers/appController.js"></script>  
 </head>
 <body ng-controller="appController as ctrl">
-
-	  <div class="container">
-
-        <!-- HEADER AND TODO COUNT -->
-        <div class="jumbotron text-center">
-            <h1>I'm a Todo-aholic <span class="label label-info">{{ ctrl.todos.length }}</span></h1>
-        </div>
-
-        <!-- TODO LIST -->
-        <div id="todo-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-
-                <!-- LOOP OVER THE TODOS IN $scope.todos -->
-                <div class="checkbox" ng-repeat="todo in ctrl.todos">
-                    <label>
-                        <input type="checkbox" ng-click="ctrl.deleteTodo(todo._id)"> {{ todo.text }}
-                    </label>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- FORM TO CREATE TODOS -->
-        <div id="todo-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <form>
-                    <div class="form-group">
-
-                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="ctrl.formData.text">
-                    </div>
-
-                    <!-- createToDo() WILL CREATE NEW TODOS -->
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="ctrl.createTodo()">Add</button>
-                </form>
-            </div>
-        </div>
-
+    
+	<div class="container"> 
+        {{ctrl.bar}}
     </div>
-	
+
 </body>
+
 </html>

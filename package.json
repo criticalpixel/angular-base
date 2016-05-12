@@ -4,7 +4,7 @@
 	"description" : "Angular base project",
 	"author" : "Thomas Horvath",
 	"scripts" : {
-		"start" : "nodemon server.js"
+		"start" : "nodemon server.js -w"
 	},
 	"main" : "lib/core.js",
 	"repository" : {
